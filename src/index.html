@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Calculator</title>
+</head>
+
+<body>
+  <!--display-->
+  <main class="main">
+    <div class="display">
+      <div class="input" style="color: #fff;">2+2</div>
+      <div class="output" style="color: #fff;">4</div>
+    </div>
+
+    <!-- EXTRAS -->
+    <div class="extras">
+      <div>
+        <img src="/assets/images/maximize.svg" alt="" class="max">
+        <img src="/assets/images/file-text.svg" alt="">
+      </div>
+      <div>
+        <img src="/assets/images/delete.svg" alt="">
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="calculator-keys">
+      <button class="light-btn">AC</button>
+      <button class="light-btn" data-action="plus/minus">+/-</button>
+      <button class="light-btn" data-action="percentage">%</button>
+      <button class="yellow-btn" data-action="divide">÷</button>
+      <button class="dark-btn">7</button>
+      <button class="dark-btn">8</button>
+      <button class="dark-btn">9</button>
+      <button class="yellow-btn" data-action="multiply">&times;</button>
+      <button class="dark-btn">4</button>
+      <button class="dark-btn">5</button>
+      <button class="dark-btn">6</button>
+      <button class="yellow-btn" data-action="subtract">-</button>
+      <button class="dark-btn">1</button>
+      <button class="dark-btn">2</button>
+      <button class="dark-btn">3</button>
+      <button class="yellow-btn" data-action="add">+</button>
+      <button class="dark-btn">0</button>
+      <button class="dark-btn" data-action="decimal">.</button>
+      <button class="yellow-btn" data-action="calculate">=</button>
+    </div>
+  </main>
+</body>
+
+</html>
