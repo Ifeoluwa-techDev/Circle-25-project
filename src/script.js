@@ -6,10 +6,12 @@ const actions = document.querySelectorAll('[data-action]')
 const deleteBtn = document.querySelector('.delete')
 const clear = document.querySelector('.clear')
 const equalButton = document.querySelector('.equal')
+const decimal = document.querySelector('.decimal')
 
 numberKeys.forEach(numberKey => {
     numberKey.addEventListener('click', () => {
         input.innerHTML += numberKey.innerHTML
+        decimal.disabled = false;
     })
 })
 
@@ -27,6 +29,20 @@ clear.addEventListener('click', () => {
     input.innerText = '';
     output.innerText = '';
 })
+
+decimal.addEventListener("click", function () {
+  if (input.innerHTML.includes(".")) {
+    decimal.disabled = true;
+  }
+});
+
+equalButton.addEventListener("click", () => {
+  try {
+    outputScreen.value = eval(outputScreen.value);
+  } catch (err) {
+    alert("Invalid");
+  }
+});
 
 
 
