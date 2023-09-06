@@ -14,8 +14,8 @@
   <!--display-->
   <main class="main">
     <div class="display">
-      <div class="input" style="color: #fff;">2+2</div>
-      <div class="output" style="color: #fff;">4</div>
+      <div class="input" style="color: #fff;"></div>
+      <div class="output" style="color: #fff;"></div>
     </div>
 
     <!-- EXTRAS -->
@@ -24,14 +24,14 @@
         <img src="/assets/images/maximize.svg" alt="" class="max">
         <img src="/assets/images/file-text.svg" alt="">
       </div>
-      <div>
+      <div class="delete">
         <img src="/assets/images/delete.svg" alt="">
       </div>
     </div>
 
     <!-- BUTTONS -->
     <div class="calculator-keys">
-      <button class="light-btn">AC</button>
+      <button class="light-btn clear">AC</button>
       <button class="light-btn" data-action="plus/minus">+/-</button>
       <button class="light-btn" data-action="percentage">%</button>
       <button class="yellow-btn" data-action="divide">÷</button>
@@ -49,9 +49,10 @@
       <button class="yellow-btn" data-action="add">+</button>
       <button class="dark-btn">0</button>
       <button class="dark-btn" data-action="decimal">.</button>
-      <button class="yellow-btn" data-action="calculate">=</button>
+      <button class="yellow-btn equal">=</button>
     </div>
   </main>
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
