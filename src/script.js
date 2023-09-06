@@ -36,14 +36,6 @@ decimal.addEventListener("click", function () {
   }
 });
 
-equalButton.addEventListener("click", () => {
-  try {
-    outputScreen.value = eval(outputScreen.value);
-  } catch (err) {
-    alert("Invalid");
-  }
-});
-
 
 
 
