@@ -15,19 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   numberKeys.forEach((numberKey) => {
     numberKey.addEventListener("click", () => {
-      if (input.innerHTML.length < 11) {
             input.innerHTML += numberKey.innerHTML;
             decimal.disabled = false;
-        }
     });
   });
 
   actions.forEach((action) => {
     action.addEventListener("click", () => {
-        if (input.innerHTML.length < 11) {
             input.innerHTML += action.innerHTML;
             decimal.disabled = false;
-        }
     });
 });
 
