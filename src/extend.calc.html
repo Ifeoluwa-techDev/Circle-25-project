@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./extend.calc.css" />
 
     <title>Calculator</title>
   </head>
@@ -20,7 +20,7 @@
       <!-- EXTRAS -->
       <div class="extras">
         <div>
-          <a href="./src/extend.calc.html">
+          <a href="../index.html">
             <img src="/assets/images/maximize.svg" alt="" class="max" />
           </a>
           <img src="/assets/images/file-text.svg" alt="" />
@@ -33,26 +33,27 @@
       <!-- BUTTONS -->
       <div class="calculator-keys">
         <button class="light-btn clear">AC</button>
-        <button class="light-btn negate" data-action="plus/minus">+/-</button>
-        <button class="light-btn percentage" data-action="percentage">%</button>
-        <button class="yellow-btn" data-action="divide">/</button>
+        <button class="light-btn sin" data-action="sin">sin</button>
+        <button class="light-btn cos" data-action="cos">cos</button>
+        <button class="yellow-btn tan" data-action="tan">tan</button>
         <button class="dark-btn">7</button>
         <button class="dark-btn">8</button>
         <button class="dark-btn">9</button>
-        <button class="yellow-btn" data-action="multiply">*</button>
+        <button class="yellow-btn log" data-action="log">log</button>
         <button class="dark-btn">4</button>
         <button class="dark-btn">5</button>
         <button class="dark-btn">6</button>
-        <button class="yellow-btn" data-action="subtract">-</button>
+        <button class="yellow-btn square" data-action="square">²</button>
         <button class="dark-btn">1</button>
         <button class="dark-btn">2</button>
         <button class="dark-btn">3</button>
-        <button class="yellow-btn" data-action="add">+</button>
+        <button class="yellow-btn" data-action="square_root">√</button>
         <button class="dark-btn">0</button>
         <button class="dark-btn decimal">.</button>
         <button class="yellow-btn equal">=</button>
       </div>
     </main>
-    <script type="text/javascript" src="./src/script.js"></script>
+    <!-- Script -->
+    <script type="text/javascript" src="./extend.calc.js"></script>
   </body>
 </html>
