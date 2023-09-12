@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const clear = document.querySelector(".clear");
   const decimal = document.querySelector(".decimal");
   const equalButton = document.querySelector(".equal");
+  const history = document.querySelector(".history");
+  const getCalcHistory = document.querySelector(".calc-history-box");
+  const calc_history = document.querySelector(".calc-history");
 
   //   Show numbers on the screen
   numberKeys.forEach((numberKey) => {
@@ -97,5 +100,31 @@ document.addEventListener("DOMContentLoaded", function () {
       const reducedOutput = currentOutput.substring(0, maxLength);
       output.innerText = reducedOutput;
     }
+    console.log(input.textContent);
+    addToHistory();
+  });
+  const calcHistory = [];
+  function addToHistory() {
+    const resultObj = {
+      input: input.textContent,
+      output: output.textContent,
+    };
+    console.log(resultObj);
+    calcHistory.push(resultObj);
+    console.log(calcHistory);
+  }
+
+  history.addEventListener("click", () => {
+    // calc_history.style.display = "block";
+    calc_history.classList.toggle("addDisplay");
+
+    getCalcHistory.innerHTML = "";
+    calcHistory.forEach((each) => {
+      let display = `<p> ➡️  ${each.input} = ${each.output}</p>`;
+      getCalcHistory.innerHTML += display;
+    });
+  });
+  window.addEventListener("load", () => {
+    calc_history.style.display = "none";
   });
 });
