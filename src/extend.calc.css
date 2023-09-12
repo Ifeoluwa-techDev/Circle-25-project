@@ -135,3 +135,72 @@ button:nth-child(17) {
 .light-btn {
   background-color: #9c9c9c;
 }
+
+/* Styling the calculator history board */
+
+.calc-history {
+  position: relative;
+  left: 200px;
+  inline-size: 200px;
+  height: 270px;
+  background-color: #636363;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 10px;
+  box-shadow: 0px 5px 10px #444444 inset;
+}
+
+.calc-history-box {
+  background-color: hsla(0, 1%, 43%, 0.151);
+  inline-size: 180px;
+  height: 220px;
+  resize: none;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.calc-history hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+span {
+  inline-size: 180px;
+  padding: 5px;
+  display: inline;
+  font-style: italic;
+}
+
+.addDisplay {
+  display: block !important;
+}
+
+.progress {
+  position: relative;
+  width: calc(100% - 8px);
+  height: 5px;
+  transform: scaleX(0);
+  transform-origin: left;
+
+  background: linear-gradient(to right, #7f837f, #191e17, #f9970e);
+  border-radius: inherit;
+  animation: progress 2.5s 0.3s linear;
+}
+
+@keyframes fade-in {
+  5% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progress {
+  to {
+    transform: scaleX(1);
+  }
+}

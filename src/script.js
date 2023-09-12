@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     getCalcHistory.innerHTML = "";
     calcHistory.forEach((each) => {
-      // let display = `<p> ${each.input} </p> <p> ${each.output}</p>`;
       let display = `<p> ➡️  ${each.input} = ${each.output}</p>`;
       getCalcHistory.innerHTML += display;
     });
