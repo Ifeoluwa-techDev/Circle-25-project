@@ -7,25 +7,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const clear = document.querySelector(".clear");
   const decimal = document.querySelector(".decimal");
   const equalButton = document.querySelector(".equal");
-  const percentage = document.querySelector(".percentage")
+  const percentage = document.querySelector(".percentage");
   const toggle = document.querySelector(".negate");
-
-
-
+  const history = document.querySelector(".history");
+  const getCalcHistory = document.querySelector(".calc-history-box");
+  const calc_history = document.querySelector(".calc-history");
 
   numberKeys.forEach((numberKey) => {
     numberKey.addEventListener("click", () => {
-            input.innerHTML += numberKey.innerHTML;
-            decimal.disabled = false;
+      input.innerHTML += numberKey.innerHTML;
+      decimal.disabled = false;
     });
   });
 
   actions.forEach((action) => {
     action.addEventListener("click", () => {
-            input.innerHTML += action.innerHTML;
-            decimal.disabled = false;
+      input.innerHTML += action.innerHTML;
+      decimal.disabled = false;
     });
-});
+  });
 
   deleteBtn.addEventListener("click", () => {
     input.innerText = input.innerText.slice(0, -1);
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  percentage.addEventListener('click', () => {
+  percentage.addEventListener("click", () => {
     if (input.innerHTML) {
       const currentInput = parseFloat(input.innerHTML);
       const percentValue = currentInput / 100;
@@ -75,10 +75,32 @@ document.addEventListener("DOMContentLoaded", function () {
       const reducedOutput = currentOutput.substring(0, maxLength);
       output.innerText = reducedOutput;
     }
+    console.log(input.textContent);
+    addToHistory();
   });
+  const calcHistory = [];
+  function addToHistory() {
+    const resultObj = {
+      input: input.textContent,
+      output: output.textContent,
+    };
+    console.log(resultObj);
+    calcHistory.push(resultObj);
+    console.log(calcHistory);
+  }
 
+  history.addEventListener("click", () => {
+    // calc_history.style.display = "block";
+    calc_history.classList.toggle("addDisplay");
 
-
-
-
+    getCalcHistory.innerHTML = "";
+    calcHistory.forEach((each) => {
+      // let display = `<p> ${each.input} </p> <p> ${each.output}</p>`;
+      let display = `<p> ➡️  ${each.input} = ${each.output}</p>`;
+      getCalcHistory.innerHTML += display;
+    });
+  });
+  window.addEventListener("load", () => {
+    calc_history.style.display = "none";
+  });
 });
