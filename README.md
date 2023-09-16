@@ -1,7 +1,6 @@
 # A Basic Calculator
 
 This is an app that performs basic arithmetic operations on numbers and let you see your calculation history.
-
 # Features built-in with this app are:
 
 . Addition
